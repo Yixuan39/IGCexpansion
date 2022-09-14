@@ -781,7 +781,7 @@ class ReCodonGeneconv:
         f = -ll
         g = -np.concatenate((other_derivs, edge_derivs))
         with open('./save/record.txt', 'a+') as file:
-            file.write(str(deepcopy(ll)) + ',' + ','.join([str(i) for i in deepcopy(self.x)]))
+            file.write(str(ll) + ',' + ','.join([str(i) for i in self.x]))
         return f, g
 
     def loglikelihood_and_gradient2(self, display = False):
